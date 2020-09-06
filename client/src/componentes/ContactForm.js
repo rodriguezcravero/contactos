@@ -50,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h2 className="text-primary">
+      <h2 className="text-primary" style={{ marginTop: "18px" }}>
         {current ? "Editar contacto" : "Agregar un contacto"}
       </h2>
       <input

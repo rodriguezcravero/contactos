@@ -11,9 +11,9 @@ const Login = (props) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      //En react, la forma de redirigir una pag es así
       props.history.push("/");
     }
+    //En react, la forma de redirigir una pag es así
 
     if (error === "Invalid credentials") {
       setAlert(error, "danger");
@@ -29,7 +29,7 @@ const Login = (props) => {
 
   const { email, password } = user;
 
-  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.user });
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
